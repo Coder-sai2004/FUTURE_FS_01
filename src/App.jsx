@@ -8,9 +8,35 @@ import profile from "./assets/ram.jpg";
 import resume from "./assets/RESUME 3.pdf";
 import quizImg from "./assets/quizapp.png";
 
+
+
 /* ---------- NAVBAR ---------- */
 function Navbar() {
+
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("dark");
+
+  /* Load saved theme */
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) setTheme(savedTheme);
+  }, []);
+
+  /* Apply theme */
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.add("light-theme");
+    } else {
+      document.body.classList.remove("light-theme");
+    }
+
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <>
       <header className="main-header">
@@ -29,9 +55,18 @@ function Navbar() {
               <li><a href="#experience">Experience</a></li>
               <li><a href="#coding">Achievements</a></li>
               <li><a href="#contact">Contact</a></li>
+
+              {/* THEME TOGGLE */}
+              <li className="theme-item">
+                <button className="theme-toggle" onClick={toggleTheme}>
+                  {theme === "dark" ? "☀️" : "🌙"}
+                </button>
+              </li>
+
             </ul>
           </nav>
 
+          {/* MOBILE MENU ICON */}
           <div
             className="menu-toggle"
             onClick={() => setMenuOpen(true)}
@@ -42,13 +77,15 @@ function Navbar() {
         </div>
       </header>
 
+      {/* OVERLAY */}
       <div
         className={`overlay ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(false)}
       ></div>
 
-      {/* SIDEBAR */}
+      {/* MOBILE SIDEBAR */}
       <div className={`mobile-nav ${menuOpen ? "active" : ""}`}>
+
         <a href="#hero" onClick={() => setMenuOpen(false)}>Home</a>
         <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
         <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
@@ -56,6 +93,12 @@ function Navbar() {
         <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
         <a href="#coding" onClick={() => setMenuOpen(false)}>Achievements</a>
         <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+
+        {/* MOBILE THEME TOGGLE */}
+        <button className="theme-toggle mobile-theme" onClick={toggleTheme}>
+          {theme === "dark" ? "Switch to Light ☀️" : "Switch to Dark 🌙"}
+        </button>
+
       </div>
     </>
   );
