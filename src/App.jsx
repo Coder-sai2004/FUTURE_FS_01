@@ -6,7 +6,8 @@ import emailjs from "@emailjs/browser";
 // ASSETS
 import profile from "./assets/ram.jpg";
 import resume from "./assets/RESUME 3.pdf";
-import quizImg from "./assets/quizapp.png";
+import quizapp from "./assets/quizapp.png";
+import crm from "./assets/crm.png";
 
 
 
@@ -120,7 +121,7 @@ function Hero() {
           </h1>
 
           <h2 className="gradient-text">
-            Full Stack Developer (MERN) | Python
+            Full Stack Developer (MERN) | Python (DSA)
           </h2>
 
           <p className="subtitle">
@@ -281,35 +282,6 @@ function Projects() {
           {/* PROJECT 1 */}
           <div className="project-row">
             <div className="project-left">
-              <h3>Personal Assistant</h3>
-
-              <p className="project-desc">
-                A Python-based voice assistant capable of executing system commands, controlling media, and answering queries using speech recognition.
-              </p>
-
-              <div className="project-tech">
-                <span>Python</span>
-                <span>SpeechRecognition</span>
-                <span>Pyttsx3</span>
-              </div>
-
-              <div className="project-buttons">
-                <a href="#">View Code</a>
-                <a href="#" target="_blank" rel="noreferrer" className="outline">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-
-            <div className="project-right">
-              <img src="https://via.placeholder.com/500x300" alt="project" />
-            </div>
-          </div>
-
-
-          {/* PROJECT 2 */}
-          <div className="project-row">
-            <div className="project-left">
               <h3>Quiz Application</h3>
 
               <p className="project-desc">
@@ -335,10 +307,45 @@ function Projects() {
             </div>
 
             <div className="project-right">
-              <img src="https://via.placeholder.com/500x300" alt="project" />
+              <img src={quizapp} alt="project" />
             </div>
           </div>
 
+
+
+          {/* PROJECT 2 */}
+          <div className="project-row">
+            <div className="project-left">
+              <h3>Mini CRM – Client Lead Management System</h3>
+
+              <p className="project-desc">
+                A full-stack MERN CRM application that helps businesses manage client leads from website forms.
+                Admins can track leads, update status, add follow-up notes, and convert potential clients
+                through a secure dashboard with analytics.
+              </p>
+
+              <div className="project-tech">
+                <span>MongoDB</span>
+                <span>Express.js</span>
+                <span>React.js</span>
+                <span>Node.js</span>
+              </div>
+
+              <div className="project-buttons">
+                <a href="https://github.com/Coder-sai2004/FUTURE_FS_02" target="_blank" rel="noreferrer">
+                  View Code
+                </a>
+
+                <a href="https://ram-mini-crm.netlify.app/dashboard" target="_blank" rel="noreferrer" className="outline">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+
+            <div className="project-right">
+              <img src={crm} alt="crm project" />
+            </div>
+          </div>
         </div>
 
       </div>
@@ -409,12 +416,12 @@ function Coding() {
           <div className="coding-card">
             <h3>LeetCode</h3>
             <p className="rating">1527</p>
-            <span>300+ Problems Solved</span>
+            <span>350+ Problems Solved</span>
           </div>
 
           <div className="coding-card">
             <h3>CodeChef</h3>
-            <p className="rating">1400</p>
+            <p className="rating">1417</p>
             <span>450+ Problems • 2★</span>
           </div>
 
