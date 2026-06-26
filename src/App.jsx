@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 // ASSETS
 import profile from "./assets/ram.jpg";
-import resume from "./assets/MY RESUME.pdf";
+import resume from "./assets/My  Resume.pdf";
 import quizapp from "./assets/quizapp.png";
 import crm from "./assets/crm.png";
 import fakejob from "./assets/fakejob.png";
@@ -192,7 +192,7 @@ function About() {
           <div className="about-block">
             <h3>🚀 Role</h3>
             <p>
-              3rd Year CSE Student | Full-Stack Developer | Problem Solver
+              Final Year CSE Student | Full-Stack Developer | Problem Solver
             </p>
           </div>
 
@@ -227,19 +227,40 @@ function About() {
 function Skills() {
   const skills = [
     {
-      title: "Programming & DSA",
+      title: "Languages",
       icon: "fas fa-code",
-      items: ["Python", "Data Structures", "Algorithms", "OOP"]
+      items: ["Python", "Java", "JavaScript"]
     },
     {
       title: "Web Development",
       icon: "fas fa-laptop-code",
-      items: ["HTML", "CSS", "JavaScript", "React.js", "Node.js", "Express.js", "REST APIs"]
+      items: ["Flask", "React.js", "Node.js", "Express.js", "HTML", "CSS"]
     },
     {
-      title: "Tools",
+      title: "AI & Machine Learning",
+      icon: "fas fa-brain",
+      items: ["Machine Learning", "TF-IDF", "Scikit-learn", "Gemini API"]
+    },
+    {
+      title: "Databases",
+      icon: "fas fa-database",
+      items: ["PostgreSQL", "SQLAlchemy", "MongoDB", "MongoDB Atlas", "SQL"]
+    },
+    {
+      title: "API & Tools",
       icon: "fas fa-tools",
-      items: ["Git", "GitHub", "VS Code"]
+      items: ["REST APIs", "Git", "GitHub", "VS Code"]
+    },
+    {
+      title: "Core Concepts",
+      icon: "fas fa-cogs",
+      items: [
+        "Data Structures & Algorithms",
+        "OOP",
+        "DBMS",
+        "Operating Systems",
+        "Computer Networks"
+      ]
     }
   ];
 
@@ -259,7 +280,9 @@ function Skills() {
 
               <div className="skills-tags">
                 {skill.items.map((item, i) => (
-                  <span key={i} className="skill-tag">{item}</span>
+                  <span key={i} className="skill-tag">
+                    {item}
+                  </span>
                 ))}
               </div>
 
@@ -481,7 +504,7 @@ function Coding() {
           <div className="coding-card">
             <h3>GeeksforGeeks</h3>
             <p className="rating">—</p>
-            <span>350+ Problems Solved</span>
+            <span>400+ Problems Solved</span>
           </div>
 
           <div className="coding-card">
