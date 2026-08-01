@@ -474,6 +474,24 @@ function Experience() {
 
           </div>
 
+          {/* EXPERIENCE 3 */}
+          <div className="experience-card">
+
+            <div className="exp-top">
+              <h3>Machine Learning Intern</h3>
+              <span className="exp-date">May 2026 – July 2026</span>
+            </div>
+
+            <h4 className="exp-company">@ VedXlence, Hyderabad</h4>
+
+            <ul className="exp-points">
+              <li>Built and evaluated machine learning models using Python, Scikit-learn, and TensorFlow/Keras.</li>
+              <li>Applied data preprocessing, feature engineering, model evaluation, and hyperparameter tuning.</li>
+              <li>Developed and deployed end-to-end ML applications using Flask and NLP concepts.</li>
+            </ul>
+
+          </div>
+
         </div>
       </div>
     </section>
